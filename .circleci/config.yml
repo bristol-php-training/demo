@@ -10,3 +10,4 @@ jobs:
     - run: composer install
 
     - run: vendor/bin/phpunit
+    - run: composer validate --strict
