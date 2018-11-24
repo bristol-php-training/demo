@@ -1,0 +1,13 @@
+{
+	"name" : "demo/circle-ci",
+	"type" : "project",
+	"require" : {
+		"php" : ">=7.1"
+	},
+
+	"autoload": {
+		"psr-4" : {
+			"Demo\\" : "src/"
+		}
+	}
+}
