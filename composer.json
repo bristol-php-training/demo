@@ -1,5 +1,7 @@
 {
 	"name" : "demo/circle-ci",
+	"description" : "Sample CI project",
+	"license" : "MIT",
 	"type" : "project",
 	"require" : {
 		"php" : ">=7.1"
