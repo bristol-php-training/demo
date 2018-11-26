@@ -12,5 +12,6 @@ return PhpCsFixer\Config::create()
         'array_syntax' => ['syntax' => 'short'],
     ])
     ->setFinder($finder)
-    ->setUsingCache(false)
+    ->setUsingCache(true)
+    ->setCacheFile(__DIR__.'/ci/cache/pcs.cache')
 ;
