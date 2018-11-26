@@ -7,9 +7,9 @@ use Demo\Dummy;
 
 class DummyTest extends TestCase
 {
-  public function testIsHappy(): void
-  {
-    $dummy = new Dummy();
-    $this->assertTrue($dummy->isHappy());
-  }	  
+    public function testIsHappy(): void
+    {
+        $dummy = new Dummy();
+        $this->assertTrue($dummy->isHappy());
+    }
 }

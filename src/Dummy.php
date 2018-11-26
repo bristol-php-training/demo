@@ -4,9 +4,8 @@ namespace Demo;
 
 class Dummy
 {
-
-  public function isHappy(): bool
-  {
-    return true;
-  }
-} 
+    public function isHappy(): bool
+    {
+        return true;
+    }
+}
