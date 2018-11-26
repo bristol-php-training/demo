@@ -11,3 +11,4 @@ jobs:
 
     - run: vendor/bin/phpunit
     - run: composer validate --strict
+    - run: vendor/bin/parallel-lint src tests
