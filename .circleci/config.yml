@@ -9,15 +9,15 @@ jobs:
 
     - restore_cache:
         keys:
-        - v1-php-vendor-{{ checksum "composer.lock" }}
-        - v1-php-vendor-
+        - v2-php-vendor-{{ checksum "composer.lock" }}
+        - v2-php-vendor-
 
     - run: composer install
 
     - save_cache:   
-        key: v1-php-vendor-{{ checksum "composer.lock" }}
+        key: v2-php-vendor-{{ checksum "composer.lock" }}
         paths:
-        - vendors
+        - vendor
 
     - run: vendor/bin/phpunit
     - run: composer validate --strict
