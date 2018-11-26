@@ -6,8 +6,18 @@ jobs:
 
     steps:
     - checkout
-                                                          
+
+    - restore_cache:
+        keys:
+        - v1-php-vendor-{{ checksum "composer.lock" }}
+        - v1-php-vendor-
+
     - run: composer install
+
+    - save_cache:   
+        key: v1-php-vendor-{{ checksum "composer.lock" }}
+        paths:
+        - vendors
 
     - run: vendor/bin/phpunit
     - run: composer validate --strict
