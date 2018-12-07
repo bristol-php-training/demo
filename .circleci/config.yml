@@ -9,7 +9,7 @@ jobs:
     - checkout
   
     - run: npm install
-    - run: rpm run scss
+    - run: npm run scss
 
 
   build-php:
