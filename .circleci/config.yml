@@ -58,5 +58,8 @@ workflows:
   build:
     jobs:
     - build-npm
-    - build-php
+    - build-php:
+        requires:
+        - build-npm 
+
 
