@@ -44,6 +44,7 @@ jobs:
         - vendor
 
 
+    - run: cat css/demo.css
     - run: vendor/bin/phpunit
     - run: composer validate --strict
     - run: vendor/bin/php-cs-fixer fix --dry-run --verbose
