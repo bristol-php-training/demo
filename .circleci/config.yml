@@ -43,20 +43,10 @@ jobs:
         paths:
         - vendor
 
-    - restore_cache:
-        keys:
-        - v1-code-standards-{{ BRANCH_NAME }} 
-        - v1-code-standards-master
-
-    - run: vendor/bin/php-cs-fixer fix --dry-run --verbose
-
-    - save_cache:
-        key: v1-code-standards-{{ BRANCH_NAME }} 
-        paths: cs/cache
-
 
     - run: vendor/bin/phpunit
     - run: composer validate --strict
+    - run: vendor/bin/php-cs-fixer fix --dry-run --verbose
     - run: vendor/bin/parallel-lint src tests
     - run: vendor/bin/security-checker security:check
 
